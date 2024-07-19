@@ -11,11 +11,20 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    height: 50px; /* Adjust as needed */
+    margin-left: 20px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
