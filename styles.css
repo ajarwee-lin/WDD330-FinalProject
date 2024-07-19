@@ -40,3 +40,15 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#product-list div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
