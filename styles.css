@@ -23,7 +23,7 @@ header {
 
 header .logo {
     height: 50px; /* Small logo size */
-    margin-right: 20px;
+    margin-left: 10px;
 }
 
 nav ul {
