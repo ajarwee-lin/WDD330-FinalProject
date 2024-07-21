@@ -1,15 +1,17 @@
+/* Update the existing CSS to have a more professional black and white theme */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
 }
 
 header {
-    background-color: #333; /* Dark gray */
+    background-color: #000; /* Black */
     color: white;
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -39,15 +41,15 @@ nav ul li a {
 
 main {
     padding: 20px;
-    background-color: #ffffff; /* White background for main content */
-    color: #333; /* Dark gray text */
+    background-color: #f8f8f8; /* Light gray background for main content */
+    color: #000; /* Black text */
     border: 1px solid #ccc; /* Light gray border */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #333; /* Dark gray */
+    background-color: #000; /* Black */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -67,13 +69,13 @@ footer {
     margin: 10px;
     width: 200px;
     background-color: #fff; /* White background for products */
-    color: #333; /* Dark gray text */
+    color: #000; /* Black text */
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
-    background-color: #333; /* Dark gray */
+    background-color: #000; /* Black */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -83,4 +85,21 @@ button {
 
 button:hover {
     background-color: #555; /* Lighter gray on hover */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }

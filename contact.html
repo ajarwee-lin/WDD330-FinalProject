@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Rexburg Local Market</title>
+    <title>Contact Us - Rexburg Local Market</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,20 +17,22 @@
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="orders.html">Orders</a></li>
                 <li><a href="account.html">Account</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="signup">
-            <h2>Sign Up</h2>
+        <section id="contact">
+            <h2>Contact Us</h2>
             <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="button" id="sign-up-btn">Sign Up</button>
-                <p>Already have an account? <a href="login.html">Log In</a></p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
