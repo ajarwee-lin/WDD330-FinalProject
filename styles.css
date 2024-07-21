@@ -1,4 +1,4 @@
-/* Update the existing CSS to have a more professional black and white theme */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,39 +8,46 @@ body {
     color: #000; /* Black text */
 }
 
+/* Header styles */
 header {
     background-color: #000; /* Black */
     color: white;
     padding: 10px 20px;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
-    height: 50px; /* Adjust as needed */
-    margin-left: 20px;
+    height: 40px; /* Small logo size */
+    margin-right: 20px;
 }
 
+/* Navigation styles */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* Main content styles */
 main {
-    padding: 20px;
+    padding: 80px 20px 20px; /* Adjust padding to account for fixed header */
     background-color: #f8f8f8; /* Light gray background for main content */
     color: #000; /* Black text */
     border: 1px solid #ccc; /* Light gray border */
@@ -48,6 +55,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer styles */
 footer {
     background-color: #000; /* Black */
     color: white;
@@ -58,6 +66,7 @@ footer {
     width: 100%;
 }
 
+/* Product list styles */
 #product-list {
     display: flex;
     flex-wrap: wrap;
@@ -74,6 +83,7 @@ footer {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Button styles */
 button {
     background-color: #000; /* Black */
     color: white;
@@ -98,7 +108,7 @@ form label {
     font-weight: bold;
 }
 
-form input {
+form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
