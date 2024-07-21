@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,10 +23,11 @@ header {
 }
 
 header .logo {
-    height: 50px; /* Small logo size */
-    margin-left: 10px;
+    height: 40px; /* Small logo size */
+    margin-right: 20px;
 }
 
+/* Navigation styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -45,7 +47,7 @@ nav ul li a {
 
 /* Main content styles */
 main {
-    padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
+    padding: 80px 20px 20px; /* Adjust padding to account for fixed header */
     background-color: #f8f8f8; /* Light gray background for main content */
     color: #000; /* Black text */
     border: 1px solid #ccc; /* Light gray border */
