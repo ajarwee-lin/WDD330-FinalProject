@@ -1,3 +1,72 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+/* Header styles */
+header {
+    background-color: #000; /* Black */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
+    background-color: #f8f8f8; /* Light gray background for main content */
+    color: #000; /* Black text */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #000; /* Black */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Additional content styles */
 section {
     margin: 40px 0;
@@ -24,12 +93,14 @@ section {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin: 15px;
-    width: 30%;
+    width: 30%; /* Adjust width to ensure three products fit in one line */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
     text-align: center;
 }
 
 #featured-products .product img {
     max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
