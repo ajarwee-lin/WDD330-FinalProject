@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Organic Apples",
+        "image": "images/apples.jpg",
+        "description": "Fresh and juicy organic apples from local farms.",
+        "price": 3.99
+    },
+    {
+        "id": 2,
+        "name": "Handmade Soap",
+        "image": "images/soap.jpg",
+        "description": "All-natural, handmade soap with soothing lavender scent.",
+        "price": 5.99
+    },
+    {
+        "id": 3,
+        "name": "Local Honey",
+        "image": "images/honey.jpg",
+        "description": "Pure, raw honey from our local beekeepers.",
+        "price": 7.99
+    },
+    {
+        "id": 4,
+        "name": "Fresh Berries",
+        "image": "images/berries.jpg",
+        "description": "A mix of fresh, organic berries from local farms.",
+        "price": 4.99
+    },
+    {
+        "id": 5,
+        "name": "Handcrafted Candles",
+        "image": "images/candles.jpg",
+        "description": "Scented, handcrafted candles made with natural ingredients.",
+        "price": 8.99
+    },
+    {
+        "id": 6,
+        "name": "Artisanal Bread",
+        "image": "images/bread.jpg",
+        "description": "Freshly baked artisanal bread using traditional methods.",
+        "price": 6.49
+    }
+]
