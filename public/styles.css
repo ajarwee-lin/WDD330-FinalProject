@@ -16,6 +16,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,6 +35,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -53,7 +55,7 @@ nav ul li a:hover {
 
 /* Main content styles */
 main {
-    padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
+    padding: 80px 20px 20px; /* Adjust padding to account for fixed header */
     background-color: #f8f8f8; /* Light gray background for main content */
     color: #000; /* Black text */
     border: 1px solid #ccc; /* Light gray border */
@@ -93,8 +95,8 @@ section {
 
 #featured-products .product-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 #featured-products .product {
@@ -105,7 +107,7 @@ section {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin: 15px;
-    width: 30%; /* Adjust width to ensure three products fit in one line */
+    flex: 1 1 30%; /* Flexbox item with basis 30% */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     text-align: center;
     transition: transform 0.5s, box-shadow 0.5s;
@@ -138,4 +140,24 @@ section {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design: Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    #featured-products .product {
+        flex: 1 1 45%; /* Flexbox item with basis 45% */
+    }
+}
+
+@media (max-width: 480px) {
+    #featured-products .product {
+        flex: 1 1 100%; /* Flexbox item with basis 100% */
+    }
 }
