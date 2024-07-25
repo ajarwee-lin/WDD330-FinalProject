@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("JavaScript is loaded and ready!");
 
     const apiUrl = "/api/products"; // Local JSON file endpoint
+    const userApiUrl = "/api/users"; // User API endpoint
 
     async function fetchProducts() {
         try {
@@ -11,6 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
             displayProducts(products);
         } catch (error) {
             console.error("Error fetching products:", error);
+        }
+    }
+
+    async function fetchUsers() {
+        try {
+            const response = await fetch(userApiUrl);
+            if (!response.ok) throw new Error("Network response was not ok");
+            const users = await response.json();
+            displayUsers(users);
+        } catch (error) {
+            console.error("Error fetching users:", error);
         }
     }
 
@@ -33,6 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
         addCartEventListeners();
     }
 
+    function displayUsers(users) {
+        const userList = document.getElementById("user-list");
+        userList.innerHTML = ""; // Clear previous content
+
+        users.forEach(user => {
+            const userDiv = document.createElement("div");
+            userDiv.className = "user";
+            userDiv.innerHTML = `
+                <h3>${user.name}</h3>
+                <p>Email: ${user.email}</p>
+            `;
+            userList.appendChild(userDiv);
+        });
+    }
+
     function addCartEventListeners() {
         const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
         addToCartButtons.forEach(button => {
@@ -48,10 +75,27 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Product added to cart!");
     }
 
-    fetchProducts();
-});
+    function handleThemeChange(event) {
+        const theme = event.target.value;
+        document.body.className = theme;
+        localStorage.setItem("theme", theme);
+    }
 
-document.getElementById("signup-form").addEventListener("submit", handleSignUp);
+    function applyStoredTheme() {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme) {
+            document.body.className = storedTheme;
+            document.getElementById("theme-select").value = storedTheme;
+        }
+    }
+
+    fetchProducts();
+    fetchUsers();
+    applyStoredTheme();
+
+    document.getElementById("signup-form").addEventListener("submit", handleSignUp);
+    document.getElementById("theme-select").addEventListener("change", handleThemeChange);
+});
 
 async function handleSignUp(event) {
     event.preventDefault();
